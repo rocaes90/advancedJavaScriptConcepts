@@ -2,9 +2,9 @@ import React, { memo } from 'react'
 
 import { Redirect, Route, Switch } from 'react-router-dom'
 
-import { routes } from '../constants'
-import Home from '../screens/home'
-import NotFound from '../screens/not-found'
+import { routes } from 'app-constants'
+import Home from 'screens/home'
+import NotFound from 'screens/not-found'
 
 const { HOME, NOT_FOUND } = routes
 
