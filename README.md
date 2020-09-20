@@ -1,68 +1,214 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Advanced JavaScript Concepts
 
-## Available Scripts
+This is my personal practice in advanced JavaScript concepts.
 
-In the project directory, you can run:
+My idea is to share a list of important concepts to validate knowledge about Object Oriented Programming, Functional Programming and some important advanced concepts in JavaScript.
 
-### `yarn start`
+Feel free to review the complete list, and let me know if you consider it important to add any other topic or concept.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## JavaScript Foundations
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- JavaScript Engine
+- JavaScript Runtime
+- Interpreter
+- Compiler
+- JIT Compiler
+- Call Stack
+- Memory Heap
+- Global Execution Context
+- Garbage Collection
+- Single Threaded Model
+- Execution Context
+- Lexical Environment | Global Environment
+- Arity
+- Hoisting [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/hoisting.js)
+  - const
+  - let
+  - var
+- Function Invocation
+  - as Function
+  - as Method
+  - as Constructor
+- Scope
+  - Global Scope
+  - Local Scope
+  - Function Scope
+  - Block Scope
+  - Lexical Scope
+  - Dynamic Scope
+- Context vs Scope
+- Scope Chain
+- this
+  - call
+  - apply
+  - bind
+- Function expressions vs Function statements
+- IIFE
+- Use Strict
+- Side effects
 
-### `yarn test`
+## Types in JavaScript
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Static and dynamically Typed
+- Primitives Types
+- Pass by reference | Pass by value
+  - Clone objects
+  - Clone arrays
+- Type coercion
+  - Value comparison operations
+- Array | Objects | Functions
+  - Dot notation vs Bracket notation
+- HOF | High Order Functions
+- Functions vs Objects
+- Closures
+  - Memory efficient
+  - Encapsulation
+- Prototypal inheritance
 
-### `yarn build`
+## Object-Oriented Programming vs Functional Programming
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- OOP - Imperative
+- FP - Declarative
+- Composition vs Inheritance
+- Delegation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Object-Oriented Programming | OOP
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Important concepts
 
-### `yarn eject`
+- This
+- New
+- In
+- Prototype
+- es6 Classes
+- object.create | Classes
+- Private | Public | Protected
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 4 principles of OOP
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Encapsulation
+- Abstraction
+- Polymorphism
+- Inheritance
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Functional Programming | FP
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Functional programming (often abbreviated FP) is the process of building software by composing pure functions, avoiding shared state, mutable data, and side-effects.
 
-## Learn More
+### Important concepts
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Inmutability
+- Idempotence
+- Declarative vs Imperative
+- Curry
+- Partial applications
+- Partial application vs Curring
+- Caching
+- Memoization
+- Pure Functions
+- Referential Transparency
+- Function Composition
+- Pipeline
+- Compose vs Pipe
+- Recursion
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Asynchronous JavaScript
 
-### Code Splitting
+- Web API
+- Callbacks
+  - Async Callback
+- Promises
+  - Resolved
+  - Rejected
+  - Pending
+  - Promise.all
+  - Parallel
+  - Sequence
+  - Race
+- Async/Await
+- catch
+- finally
+- for await of
+- Job Queue | Promises
+- Task Queue | Callback Queue
+- Event Loop
+- Threads, Concurrency and Parallelism
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Error Handling
 
-### Analyzing the Bundle Size
+- Error
+  - Message
+  - Name
+  - Stack
+- Error types
+  - GeneralError
+  - SyntaxError
+  - ReferenceError
+- try | catch | finally
+- Errors in Asynchronous code
+- Custom Errors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Modules in JavaScript
 
-### Making a Progressive Web App
+- Pros | Cons
+- IIFE
+- Native ES Modules
+- CommonJS
+- UMD | Universal Module Definition
+- AMD | Asunchronous Module Definition
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Template Literals
 
-### Advanced Configuration
+- Multi-line strings
+- Avoid scaping characters
+- Variable insertion
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## ES6 (2015)
 
-### Deployment
+- let | const
+- Arrow functions
+- Classes
+- Default parameter values
+- Import/export modules
+- Iterators
+- Template literals
+- Spread operator
+- Block-Scoped Variables
+- Block-Scoped Functions
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## ES7 (2016)
 
-### `yarn build` fails to minify
+- Base \*\* exponent
+- Array.includes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## ES8 (ES2017)
+
+- Object.entries/Object.values
+- String padding | padStart/padEnd
+- Trailing comma
+- Atomics and shared memory
+
+## ES9 (ES2018)
+
+- Lifting template literal restriction
+- Asynchronous iterators
+- Promise.finally
+- Object destructuring
+
+## ES10 (ES2019)
+
+- Array.flat
+- Array.flatMap | map().flat()
+- Object.fromEntries | reverse from Object.entries
+- String.trimStart | String.trimEnd
+- Optional Carch binding
+- Function.toString revisited to have a consistent behaviour.
+- Symbol Description
+- BigInt
+- Improvement on Unicode support for JSON.stringify()
+- Array.sort now retains order if keys are equal
+- Make JavaScript a superset of JSON
+
+continue...
+
+#let's keep learning together
