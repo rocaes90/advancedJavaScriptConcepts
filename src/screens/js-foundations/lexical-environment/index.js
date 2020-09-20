@@ -1,41 +1,27 @@
-import React, { memo } from 'react'
-import { Box, Typography, makeStyles } from '@material-ui/core'
+import React, { Fragment, memo } from 'react'
 
 import Wrapper from 'screens/layout/wrapper'
-import { text } from 'config/styles'
-
-const useStyles = makeStyles((theme) => ({
-  ...text,
-}))
+import DetailsRow, { OtherDetails } from 'components/details-row'
 
 function LexicalEnvironment() {
-  const classes = useStyles()
-
   return (
     <Wrapper title="LEXICAL ENVIRONMENT" code="N/A">
-      <Box>
-        <Typography className={classes.text}>
+      <Fragment>
+        <DetailsRow>
           Lexical environments means where the code was written.
-        </Typography>
-        <Typography
-          color="primary"
-          align="center"
-          variant="subtitle1"
-          className={classes.text}
-        >
-          Some other details
-        </Typography>
-        <Typography className={classes.text}>
+        </DetailsRow>
+        <OtherDetails />
+        <DetailsRow>
           The Global Environment is the parent environment to all other
           environments created in the code.
-        </Typography>
-        <Typography className={classes.text}>
+        </DetailsRow>
+        <DetailsRow>
           In the browser, the global environment is called window.
-        </Typography>
-        <Typography className={classes.text}>
+        </DetailsRow>
+        <DetailsRow>
           In Node.js, the global environment is called global.
-        </Typography>
-      </Box>
+        </DetailsRow>
+      </Fragment>
     </Wrapper>
   )
 }

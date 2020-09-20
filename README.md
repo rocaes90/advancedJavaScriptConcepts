@@ -6,6 +6,8 @@ My idea is to share a list of important concepts to validate knowledge about Obj
 
 Feel free to review the complete list, and let me know if you consider it important to add any other topic or concept.
 
+Here is the onLine app: https://cocky-galileo-03ae5f.netlify.app/
+
 ## JavaScript Foundations
 
 - JavaScript Engine

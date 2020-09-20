@@ -9,14 +9,18 @@ import {
 
 import ArrowBack from 'components/arrow-back'
 import { routes } from 'app-constants'
+import useResponsive from 'hooks/responsive.hook'
 
 const {
   core: { HOME },
 } = routes
 
 const useStyles = makeStyles((theme) => ({
-  codeTextArea: {
+  codeTextAreaContainer: {
     width: '100%',
+  },
+  codeTextArea: {
+    width: '-webkit-fill-available',
   },
   subtitles: {
     color: theme.palette.primary.dark,
@@ -31,7 +35,13 @@ function Wrapper({
   arrowBackLabel = 'GO HOME',
 }) {
   const classes = useStyles()
+  const { isSmallScreen } = useResponsive()
+
   let routeToUse = arrowBackRoute ? arrowBackRoute : HOME
+
+  const titleProps = {
+    variant: isSmallScreen ? 'h3' : 'h2',
+  }
 
   return (
     <Box
@@ -41,15 +51,21 @@ function Wrapper({
       alignItems="center"
       pt={4}
     >
-      <Box display="flex" width="80%">
+      <Box display="flex" width={{ xs: '100%', md: '80%' }}>
         <ArrowBack label={arrowBackLabel} route={routeToUse} />
       </Box>
-      <Typography color="primary" variant="h2">
+      <Typography {...titleProps} color="primary">
         {title}
       </Typography>
-      <Box display="flex" width="80%" pt={4} justifyContent="space-between">
-        <Box width="50%" pr={4}>
-          <Box mb={3}>
+      <Box
+        display="flex"
+        width={{ xs: '100%', md: '80%' }}
+        pt={4}
+        justifyContent="space-between"
+        flexDirection={{ xs: 'column-reverse', md: 'row' }}
+      >
+        <Box width={{ xs: '100%', md: '50%' }} pr={4}>
+          <Box mb={{ xs: 2, md: 3 }}>
             <Typography
               className={classes.subtitles}
               align="center"
@@ -58,15 +74,17 @@ function Wrapper({
               Code Example
             </Typography>
           </Box>
-          <TextareaAutosize
-            className={classes.codeTextArea}
-            rowsMin={40}
-            rowsMax={40}
-            value={code}
-          />
+          <Box className={classes.codeTextAreaContainer}>
+            <TextareaAutosize
+              className={classes.codeTextArea}
+              rowsMin={40}
+              rowsMax={40}
+              value={code}
+            />
+          </Box>
         </Box>
-        <Box width="45%">
-          <Box mb={3}>
+        <Box width={{ xs: '100%', md: '45%' }}>
+          <Box mb={{ xs: 2, md: 3 }}>
             <Typography
               className={classes.subtitles}
               align="center"
@@ -75,7 +93,7 @@ function Wrapper({
               Details
             </Typography>
           </Box>
-          {children}
+          <Box textAlign={{ xs: 'center' }}>{children}</Box>
         </Box>
       </Box>
     </Box>
