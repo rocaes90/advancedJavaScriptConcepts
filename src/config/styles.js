@@ -1,5 +1,3 @@
-import { StyleRules, Theme } from '@material-ui/core/styles'
-
 import { Colors, Fonts } from 'config'
 
 export const logoImg = {

@@ -10,7 +10,7 @@ function ArrowBack({ route, label }) {
 
   const onClickBackCallback = useCallback(() => {
     onClickBack(route)
-  }, [route])
+  }, [onClickBack, route])
 
   return (
     <Box>

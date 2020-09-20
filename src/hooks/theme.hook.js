@@ -1,4 +1,3 @@
-import { Theme } from '@material-ui/core/styles'
 import { createMuiTheme } from '@material-ui/core/styles'
 
 import { Colors, Fonts, FontSizes } from 'config'

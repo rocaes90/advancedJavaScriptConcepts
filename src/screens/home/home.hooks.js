@@ -19,23 +19,23 @@ function useHome() {
 
   const onClickThis = useCallback(() => {
     history.push(THIS)
-  }, [])
+  }, [history])
 
   const onClickHoisting = useCallback(() => {
     history.push(HOISTING)
-  }, [])
+  }, [history])
 
   const onClickExecutionContext = useCallback(() => {
     history.push(EXECUTION_CONTEXT)
-  }, [])
+  }, [history])
 
   const onClickLexicalEnvironment = useCallback(() => {
     history.push(LEXICAL_ENVIRONMENT)
-  }, [])
+  }, [history])
 
   const onClickScope = useCallback(() => {
     history.push(SCOPE)
-  }, [])
+  }, [history])
 
   return {
     onClickThis,

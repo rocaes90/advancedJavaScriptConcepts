@@ -13,7 +13,7 @@ function useArrowBack() {
 
   const onClickBack = useCallback(() => {
     history.push(HOME)
-  }, [])
+  }, [history])
 
   return {
     onClickBack,
