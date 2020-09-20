@@ -5,7 +5,7 @@ import DetailsRow, { OtherDetails } from 'components/details-row'
 
 function LexicalEnvironment() {
   return (
-    <Wrapper title="LEXICAL ENVIRONMENT" code="N/A">
+    <Wrapper title="LEXICAL ENVIRONMENT">
       <Fragment>
         <DetailsRow>
           Lexical environments means where the code was written.

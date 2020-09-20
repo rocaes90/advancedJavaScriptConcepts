@@ -43,6 +43,8 @@ function Wrapper({
     variant: isSmallScreen ? 'h3' : 'h2',
   }
 
+  const hasCodeToDisplay = code ? true : false
+
   return (
     <Box
       width="100%"
@@ -64,25 +66,27 @@ function Wrapper({
         justifyContent="space-between"
         flexDirection={{ xs: 'column-reverse', md: 'row' }}
       >
-        <Box width={{ xs: '100%', md: '50%' }} pr={4}>
-          <Box mb={{ xs: 2, md: 3 }}>
-            <Typography
-              className={classes.subtitles}
-              align="center"
-              variant="subtitle1"
-            >
-              Code Example
-            </Typography>
+        {hasCodeToDisplay && (
+          <Box width={{ xs: '100%', md: '50%' }} pr={4}>
+            <Box mb={{ xs: 2, md: 3 }}>
+              <Typography
+                className={classes.subtitles}
+                align="center"
+                variant="subtitle1"
+              >
+                Code Example
+              </Typography>
+            </Box>
+            <Box className={classes.codeTextAreaContainer}>
+              <TextareaAutosize
+                className={classes.codeTextArea}
+                rowsMin={40}
+                rowsMax={40}
+                value={code}
+              />
+            </Box>
           </Box>
-          <Box className={classes.codeTextAreaContainer}>
-            <TextareaAutosize
-              className={classes.codeTextArea}
-              rowsMin={40}
-              rowsMax={40}
-              value={code}
-            />
-          </Box>
-        </Box>
+        )}
         <Box width={{ xs: '100%', md: '45%' }}>
           <Box mb={{ xs: 2, md: 3 }}>
             <Typography

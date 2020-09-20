@@ -5,7 +5,7 @@ import DetailsRow from 'components/details-row'
 
 function ExecutionContext() {
   return (
-    <Wrapper title="EXECUTION CONTEXT" code="N/A">
+    <Wrapper title="EXECUTION CONTEXT">
       <Fragment>
         <DetailsRow>
           The environment in which the current code is being evaluated in. There
