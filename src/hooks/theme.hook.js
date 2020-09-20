@@ -4,11 +4,6 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import { Colors, Fonts, FontSizes } from 'config'
 
 function useCustomTheme() {
-  const primary = Colors.primary
-  const error = Colors.error
-
-  console.log('primary', primary)
-
   const {
     body1,
     body2,
@@ -30,8 +25,9 @@ function useCustomTheme() {
         default: Colors.athensGray,
       },
       primary: {
-        main: primary,
-        light: Colors.panache,
+        main: Colors.primary,
+        light: Colors.primaryLight,
+        dark: Colors.primaryDark,
       },
       grey: {
         400: Colors.silver,
@@ -47,7 +43,7 @@ function useCustomTheme() {
         black: Colors.black,
       },
       error: {
-        main: error,
+        main: Colors.error,
       },
       type: 'light',
     },
@@ -248,11 +244,11 @@ function useCustomTheme() {
         button: {
           '&:hover': {
             backgroundColor: Colors.panache,
-            color: primary,
+            color: Colors.primary,
           },
           '&.Mui-selected': {
             backgroundColor: Colors.panache,
-            color: primary,
+            color: Colors.primary,
           },
         },
       },

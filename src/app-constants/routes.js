@@ -6,6 +6,9 @@ const routes = {
   foundations: {
     HOISTING: '/hoisting',
     THIS: '/this',
+    EXECUTION_CONTEXT: '/execution-context',
+    LEXICAL_ENVIRONMENT: '/lexical-environment',
+    SCOPE: '/scope',
   },
 }
 

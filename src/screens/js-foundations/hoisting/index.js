@@ -1,19 +1,12 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Box, Typography, makeStyles } from '@material-ui/core'
 
 import Wrapper from 'screens/layout/wrapper'
-import { routes } from 'app-constants'
-
 import code from 'content/hoisting'
-
-const {
-  foundations: { THIS },
-} = routes
+import { text } from 'config/styles'
 
 const useStyles = makeStyles((theme) => ({
-  text: {
-    marginBottom: '20px',
-  },
+  ...text,
 }))
 
 function Hoisting() {
@@ -22,14 +15,19 @@ function Hoisting() {
   console.log('codeExample', code)
 
   return (
-    <Wrapper title="HOISTING" code={code} arrowBackRoute={THIS}>
+    <Wrapper title="HOISTING" code={code}>
       <Box>
         <Typography className={classes.text}>
           Hoisting is a JavaScript mechanism where variables and function
           declarations are moved to the top of their scope before code
           execution.
         </Typography>
-        <Typography align="center" variant="subtitle1" className={classes.text}>
+        <Typography
+          color="primary"
+          align="center"
+          variant="subtitle1"
+          className={classes.text}
+        >
           Some other details
         </Typography>
         <Typography>Here is the JS lifecycle:</Typography>
@@ -53,4 +51,4 @@ function Hoisting() {
   )
 }
 
-export default Hoisting
+export default memo(Hoisting)

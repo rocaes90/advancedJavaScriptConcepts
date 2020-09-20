@@ -15,7 +15,7 @@ function ArrowBack({ route, label }) {
   return (
     <Box>
       <Button color="primary" onClick={onClickBackCallback}>
-        <Box>
+        <Box mr={2}>
           <ArrowBackIcon />
         </Box>
         <Typography>{label}</Typography>

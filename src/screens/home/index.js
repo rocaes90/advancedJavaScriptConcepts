@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Box, Typography, Button, makeStyles } from '@material-ui/core'
+import { Box, Typography, makeStyles } from '@material-ui/core'
+
+import ButtonTopic from 'components/button-topic'
 
 import useHome from './home.hooks'
 
@@ -15,13 +17,23 @@ const useStyles = makeStyles((theme) => ({
 
 function Home() {
   const classes = useStyles()
-  const { onClickThis, onClickHoisting } = useHome()
+  const {
+    onClickThis,
+    onClickHoisting,
+    onClickExecutionContext,
+    onClickLexicalEnvironment,
+    onClickScope,
+  } = useHome()
 
   return (
     <Box textAlign="center">
-      <Typography variant="h2">Advanced JavaScript Concepts</Typography>
+      <Typography color="primary" variant="h2">
+        Advanced JavaScript Concepts
+      </Typography>
       <Box mt={4} display="flex" flexDirection="column" alignItems="center">
-        <Typography variant="h4">JavaScript Foundations</Typography>
+        <Typography color="primary" variant="h4">
+          JavaScript Foundations
+        </Typography>
         <Box
           className={classes.optionsContainer}
           width="80%"
@@ -30,12 +42,17 @@ function Home() {
           display="flex"
           flexWrap="wrap"
         >
-          <Button variant="contained" onClick={onClickThis}>
-            This
-          </Button>
-          <Button variant="contained" onClick={onClickHoisting}>
-            Hoisting
-          </Button>
+          <ButtonTopic
+            label="Execution Context"
+            onClick={onClickExecutionContext}
+          />
+          <ButtonTopic
+            label="Lexical Environment"
+            onClick={onClickLexicalEnvironment}
+          />
+          <ButtonTopic label="Scope" onClick={onClickScope} />
+          <ButtonTopic label="Hoisting" onClick={onClickHoisting} />
+          <ButtonTopic label="This" onClick={onClickThis} />
         </Box>
       </Box>
     </Box>

@@ -1,24 +1,21 @@
 import React, { memo } from 'react'
-
 import { Box, Typography, makeStyles } from '@material-ui/core'
 
 import Wrapper from 'screens/layout/wrapper'
-import code from 'content/this'
 import { text } from 'config/styles'
 
 const useStyles = makeStyles((theme) => ({
   ...text,
 }))
 
-function This() {
+function LexicalEnvironment() {
   const classes = useStyles()
 
   return (
-    <Wrapper title="THIS" code={code}>
+    <Wrapper title="LEXICAL ENVIRONMENT" code="N/A">
       <Box>
         <Typography className={classes.text}>
-          "this" can be thought of as "who called me?"" i.e., what is to the
-          left of the dot, such as window.a()
+          Lexical environments means where the code was written.
         </Typography>
         <Typography
           color="primary"
@@ -28,22 +25,19 @@ function This() {
         >
           Some other details
         </Typography>
-        <Typography className={classes.text} variant="body2">
-          "this" is the object which the function is a property of
+        <Typography className={classes.text}>
+          The Global Environment is the parent environment to all other
+          environments created in the code.
         </Typography>
         <Typography className={classes.text}>
-          "this" gives functions access to their object and its properties
+          In the browser, the global environment is called window.
         </Typography>
         <Typography className={classes.text}>
-          "this" is dynamically scoped, i.e. it doesn’t matter where it was
-          written, it matters where it was called
-        </Typography>
-        <Typography className={classes.text}>
-          Arrow functions bind “this” to the lexical scope
+          In Node.js, the global environment is called global.
         </Typography>
       </Box>
     </Wrapper>
   )
 }
 
-export default memo(This)
+export default memo(LexicalEnvironment)

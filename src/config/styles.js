@@ -9,6 +9,12 @@ export const logoImg = {
   },
 }
 
+export const text = {
+  text: {
+    marginBottom: '20px',
+  },
+}
+
 export const link = {
   link: {
     textDecoration: 'underline',
@@ -108,4 +114,5 @@ export default {
   logoImg,
   roundWhiteBox,
   textField,
+  text,
 }

@@ -5,7 +5,13 @@ import { useHistory } from 'react-router-dom'
 import { routes } from 'app-constants'
 
 const {
-  foundations: { HOISTING, THIS },
+  foundations: {
+    HOISTING,
+    THIS,
+    EXECUTION_CONTEXT,
+    LEXICAL_ENVIRONMENT,
+    SCOPE,
+  },
 } = routes
 
 function useHome() {
@@ -19,7 +25,25 @@ function useHome() {
     history.push(HOISTING)
   }, [])
 
-  return { onClickThis, onClickHoisting }
+  const onClickExecutionContext = useCallback(() => {
+    history.push(EXECUTION_CONTEXT)
+  }, [])
+
+  const onClickLexicalEnvironment = useCallback(() => {
+    history.push(LEXICAL_ENVIRONMENT)
+  }, [])
+
+  const onClickScope = useCallback(() => {
+    history.push(SCOPE)
+  }, [])
+
+  return {
+    onClickThis,
+    onClickHoisting,
+    onClickExecutionContext,
+    onClickLexicalEnvironment,
+    onClickScope,
+  }
 }
 
 export default useHome

@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   codeTextArea: {
     width: '100%',
   },
+  subtitles: {
+    color: theme.palette.primary.dark,
+  },
 }))
 
 function Wrapper({
@@ -41,11 +44,17 @@ function Wrapper({
       <Box display="flex" width="80%">
         <ArrowBack label={arrowBackLabel} route={routeToUse} />
       </Box>
-      <Typography variant="h2">{title}</Typography>
-      <Box display="flex" width="80%" pt={4}>
+      <Typography color="primary" variant="h2">
+        {title}
+      </Typography>
+      <Box display="flex" width="80%" pt={4} justifyContent="space-between">
         <Box width="50%" pr={4}>
           <Box mb={3}>
-            <Typography align="center" variant="subtitle1">
+            <Typography
+              className={classes.subtitles}
+              align="center"
+              variant="subtitle1"
+            >
               Code Example
             </Typography>
           </Box>
@@ -56,9 +65,13 @@ function Wrapper({
             value={code}
           />
         </Box>
-        <Box width="50%">
+        <Box width="45%">
           <Box mb={3}>
-            <Typography align="center" variant="subtitle1">
+            <Typography
+              className={classes.subtitles}
+              align="center"
+              variant="subtitle1"
+            >
               Details
             </Typography>
           </Box>

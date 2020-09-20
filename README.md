@@ -29,7 +29,7 @@ Feel free to review the complete list, and let me know if you consider it import
   - as Function
   - as Method
   - as Constructor
-- Scope
+- Scope [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope.js)
   - Global Scope
   - Local Scope
   - Function Scope
@@ -38,7 +38,7 @@ Feel free to review the complete list, and let me know if you consider it import
   - Dynamic Scope
 - Context vs Scope
 - Scope Chain
-- this
+- this [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/this.js)
   - call
   - apply
   - bind
@@ -76,7 +76,7 @@ Feel free to review the complete list, and let me know if you consider it import
 
 ### Important concepts
 
-- This
+- This [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/this.js)
 - New
 - In
 - Prototype
