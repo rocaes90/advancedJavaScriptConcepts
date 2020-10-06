@@ -3,7 +3,6 @@ import React, { Fragment } from 'react'
 import { Box, Typography } from '@material-ui/core'
 
 import ArrowBack from 'components/arrow-back'
-import Footer from 'components/footer'
 import { routes } from 'app-constants'
 
 const {
@@ -26,7 +25,6 @@ function NotFound() {
           not found
         </Typography>
       </Box>
-      <Footer />
     </Fragment>
   )
 }

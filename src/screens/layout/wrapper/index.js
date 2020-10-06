@@ -5,7 +5,6 @@ import { Box, Typography } from '@material-ui/core'
 import ArrowBack from 'components/arrow-back'
 import { routes } from 'app-constants'
 import useResponsive from 'hooks/responsive.hook'
-import Footer from 'components/footer'
 
 const {
   core: { HOME },
@@ -49,7 +48,6 @@ function Wrapper({
       >
         <Box textAlign={{ xs: 'center' }}>{children}</Box>
       </Box>
-      <Footer />
     </Box>
   )
 }
