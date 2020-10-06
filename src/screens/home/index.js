@@ -3,6 +3,7 @@ import React from 'react'
 import { Box, Typography, makeStyles } from '@material-ui/core'
 
 import ButtonTopic from 'components/button-topic'
+import Footer from 'components/footer'
 import useResponsive from 'hooks/responsive.hook'
 
 import useHome from './home.hooks'
@@ -65,6 +66,7 @@ function Home() {
           <ButtonTopic label="This" onClick={onClickThis} />
         </Box>
       </Box>
+      <Footer />
     </Box>
   )
 }
