@@ -1,26 +1,29 @@
 import React, { Fragment, memo } from 'react'
 
 import Wrapper from 'screens/layout/wrapper'
-import DetailsRow, { OtherDetails } from 'components/details-row'
+import Details from 'components/details'
 
 function LexicalEnvironment() {
+  const content = [
+    {
+      descriptions: [`Lexical environments means where the code was written.`],
+    },
+    // {
+    //   subtitle: 'Some other details',
+    //   descriptions: [
+    //     `The Global Environment is the parent environment to all other
+    //     environments created in the code.`,
+    //     `In the browser, the global environment is called window.`,
+    //     `In Node.js, the global environment is called global.`,
+    //   ],
+    // },
+  ]
   return (
     <Wrapper title="LEXICAL ENVIRONMENT">
       <Fragment>
-        <DetailsRow>
-          Lexical environments means where the code was written.
-        </DetailsRow>
-        <OtherDetails />
-        <DetailsRow>
-          The Global Environment is the parent environment to all other
-          environments created in the code.
-        </DetailsRow>
-        <DetailsRow>
-          In the browser, the global environment is called window.
-        </DetailsRow>
-        <DetailsRow>
-          In Node.js, the global environment is called global.
-        </DetailsRow>
+        {content.map((item, index) => (
+          <Details key={index} item={item} />
+        ))}
       </Fragment>
     </Wrapper>
   )

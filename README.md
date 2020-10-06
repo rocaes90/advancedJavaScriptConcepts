@@ -23,7 +23,7 @@ Here is the onLine app: https://cocky-galileo-03ae5f.netlify.app/
 - Execution Context
 - Lexical Environment | Global Environment
 - Arity
-- Hoisting [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/hoisting.js)
+- Hoisting [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/hoisting.js)
   - const
   - let
   - var
@@ -31,16 +31,16 @@ Here is the onLine app: https://cocky-galileo-03ae5f.netlify.app/
   - as Function
   - as Method
   - as Constructor
-- Scope [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope.js)
-  - Global Scope
-  - Local Scope
-  - Function Scope
-  - Block Scope
+- Scope
+  - Global Scope [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope/global.js)
+  - Local Scope [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope/local.js)
+  - Function Scope [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope/function.js)
+  - Block Scope [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope/block.js)
+  - Dynamic Scope [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/scope/dynamic.js)
   - Lexical Scope
-  - Dynamic Scope
 - Context vs Scope
 - Scope Chain
-- this [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/this.js)
+- this [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/this.js)
   - call
   - apply
   - bind
@@ -78,7 +78,7 @@ Here is the onLine app: https://cocky-galileo-03ae5f.netlify.app/
 
 ### Important concepts
 
-- This [[Example code]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/this.js)
+- This [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/this.js)
 - New
 - In
 - Prototype

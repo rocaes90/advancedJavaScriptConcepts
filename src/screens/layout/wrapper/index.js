@@ -1,11 +1,6 @@
 import React from 'react'
 
-import {
-  Box,
-  TextareaAutosize,
-  makeStyles,
-  Typography,
-} from '@material-ui/core'
+import { Box, Typography } from '@material-ui/core'
 
 import ArrowBack from 'components/arrow-back'
 import { routes } from 'app-constants'
@@ -15,18 +10,6 @@ const {
   core: { HOME },
 } = routes
 
-const useStyles = makeStyles((theme) => ({
-  codeTextAreaContainer: {
-    width: '100%',
-  },
-  codeTextArea: {
-    width: '-webkit-fill-available',
-  },
-  subtitles: {
-    color: theme.palette.primary.dark,
-  },
-}))
-
 function Wrapper({
   children,
   code,
@@ -34,7 +17,6 @@ function Wrapper({
   arrowBackRoute,
   arrowBackLabel = 'GO HOME',
 }) {
-  const classes = useStyles()
   const { isSmallScreen } = useResponsive()
 
   let routeToUse = arrowBackRoute ? arrowBackRoute : HOME
@@ -42,8 +24,6 @@ function Wrapper({
   const titleProps = {
     variant: isSmallScreen ? 'h3' : 'h2',
   }
-
-  const hasCodeToDisplay = code ? true : false
 
   return (
     <Box
@@ -63,42 +43,10 @@ function Wrapper({
         display="flex"
         width={{ xs: '100%', md: '80%' }}
         pt={4}
-        justifyContent="space-between"
+        justifyContent="center"
         flexDirection={{ xs: 'column-reverse', md: 'row' }}
       >
-        {hasCodeToDisplay && (
-          <Box width={{ xs: '100%', md: '50%' }} pr={4}>
-            <Box mb={{ xs: 2, md: 3 }}>
-              <Typography
-                className={classes.subtitles}
-                align="center"
-                variant="subtitle1"
-              >
-                Code Example
-              </Typography>
-            </Box>
-            <Box className={classes.codeTextAreaContainer}>
-              <TextareaAutosize
-                className={classes.codeTextArea}
-                rowsMin={40}
-                rowsMax={40}
-                value={code}
-              />
-            </Box>
-          </Box>
-        )}
-        <Box width={{ xs: '100%', md: '45%' }}>
-          <Box mb={{ xs: 2, md: 3 }}>
-            <Typography
-              className={classes.subtitles}
-              align="center"
-              variant="subtitle1"
-            >
-              Details
-            </Typography>
-          </Box>
-          <Box textAlign={{ xs: 'center' }}>{children}</Box>
-        </Box>
+        <Box textAlign={{ xs: 'center' }}>{children}</Box>
       </Box>
     </Box>
   )
