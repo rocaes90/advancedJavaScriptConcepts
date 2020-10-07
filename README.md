@@ -19,9 +19,11 @@ Here is the onLine app: https://cocky-galileo-03ae5f.netlify.app/
 - Memory Heap
 - Global Execution Context
 - Garbage Collection
+- Memory leaks
 - Single Threaded Model
 - Execution Context
 - Lexical Environment | Global Environment
+- Lexical scope | Dynamic scope
 - Arity
 - Hoisting [[Code Reference]](https://github.com/rocaes90/advancedJavaScriptConcepts/tree/master/src/content/hoisting.js)
   - const
